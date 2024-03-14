@@ -1,0 +1,143 @@
+\doxysection{matrix\+\_\+operations.\+c File Reference}
+\hypertarget{matrix__operations_8c}{}\label{matrix__operations_8c}\index{matrix\_operations.c@{matrix\_operations.c}}
+
+
+Implementação de funções para manipulação de uma matriz representada por uma lista ligada.  
+
+
+{\ttfamily \#include "{}matrix\+\_\+operations.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{matrix__operations_8c_ab7af0fb125d355fa76a2f01320bf4170}{create\+Node}} (int data)
+\begin{DoxyCompactList}\small\item\em Cria um novo nó para a lista ligada. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix__operations_8c_a3102720fc5b6b804809a31062c0c5821}{insert\+End}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}head\+Ref, int data)
+\begin{DoxyCompactList}\small\item\em Insere um nó no final da lista. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix__operations_8c_af7d5329dc5c82c92c275096136300e26}{print\+Matrix}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}head, int rows, int cols\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Imprime os elementos da lista em formato tabular, simulando uma matriz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix__operations_8c_a46b0bdc0c9006c16815979fabb74848e}{alter\+Number}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}head, int rows, int cols\mbox{[}$\,$\mbox{]}, int row\+Index, int col\+Index, int new\+Value)
+\begin{DoxyCompactList}\small\item\em Altera o número em uma posição específica da "{}matriz"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{matrix__operations_8c_a604d4adbf89038670723d9baedd635d7}{free\+List}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Libera a memória alocada para a lista ligada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementação de funções para manipulação de uma matriz representada por uma lista ligada. 
+
+\begin{DoxyAuthor}{Author}
+Marco Alves (\href{mailto:a23036@alunos.ipca.pt}{\texttt{ a23036@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2024-\/03-\/14
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2024 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{matrix__operations_8c_a46b0bdc0c9006c16815979fabb74848e}\label{matrix__operations_8c_a46b0bdc0c9006c16815979fabb74848e} 
+\index{matrix\_operations.c@{matrix\_operations.c}!alterNumber@{alterNumber}}
+\index{alterNumber@{alterNumber}!matrix\_operations.c@{matrix\_operations.c}}
+\doxysubsubsection{\texorpdfstring{alterNumber()}{alterNumber()}}
+{\footnotesize\ttfamily void alter\+Number (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{rows,  }\item[{int}]{cols\mbox{[}$\,$\mbox{]},  }\item[{int}]{row\+Index,  }\item[{int}]{col\+Index,  }\item[{int}]{new\+Value }\end{DoxyParamCaption})}
+
+
+
+Altera o número em uma posição específica da "{}matriz"{}. 
+
+Altera o número em uma posição específica da matriz.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & O ponteiro para o primeiro nó da lista. \\
+\hline
+{\em rows} & O número de linhas da "{}matriz"{}. \\
+\hline
+{\em cols} & Um array contendo o número de colunas em cada linha. \\
+\hline
+{\em row\+Index} & O índice da linha onde o valor deve ser alterado. \\
+\hline
+{\em col\+Index} & O índice da coluna onde o valor deve ser alterado. \\
+\hline
+{\em new\+Value} & O novo valor a ser atribuído à posição especificada. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{matrix__operations_8c_ab7af0fb125d355fa76a2f01320bf4170}\label{matrix__operations_8c_ab7af0fb125d355fa76a2f01320bf4170} 
+\index{matrix\_operations.c@{matrix\_operations.c}!createNode@{createNode}}
+\index{createNode@{createNode}!matrix\_operations.c@{matrix\_operations.c}}
+\doxysubsubsection{\texorpdfstring{createNode()}{createNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} create\+Node (\begin{DoxyParamCaption}\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Cria um novo nó para a lista ligada. 
+
+Esta função aloca memória para um novo nó da lista ligada e o inicializa com o valor fornecido.
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & O valor a ser armazenado no novo nó. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um ponteiro para o novo nó criado. 
+\end{DoxyReturn}
+\Hypertarget{matrix__operations_8c_a604d4adbf89038670723d9baedd635d7}\label{matrix__operations_8c_a604d4adbf89038670723d9baedd635d7} 
+\index{matrix\_operations.c@{matrix\_operations.c}!freeList@{freeList}}
+\index{freeList@{freeList}!matrix\_operations.c@{matrix\_operations.c}}
+\doxysubsubsection{\texorpdfstring{freeList()}{freeList()}}
+{\footnotesize\ttfamily void free\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{head }\end{DoxyParamCaption})}
+
+
+
+Libera a memória alocada para a lista ligada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & O ponteiro para o primeiro nó da lista. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{matrix__operations_8c_a3102720fc5b6b804809a31062c0c5821}\label{matrix__operations_8c_a3102720fc5b6b804809a31062c0c5821} 
+\index{matrix\_operations.c@{matrix\_operations.c}!insertEnd@{insertEnd}}
+\index{insertEnd@{insertEnd}!matrix\_operations.c@{matrix\_operations.c}}
+\doxysubsubsection{\texorpdfstring{insertEnd()}{insertEnd()}}
+{\footnotesize\ttfamily void insert\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{head\+Ref,  }\item[{int}]{data }\end{DoxyParamCaption})}
+
+
+
+Insere um nó no final da lista. 
+
+Esta função insere um novo nó contendo o dado fornecido no final da lista ligada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head\+Ref} & O endereço do ponteiro para o primeiro nó da lista. \\
+\hline
+{\em data} & O dado a ser armazenado no novo nó. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{matrix__operations_8c_af7d5329dc5c82c92c275096136300e26}\label{matrix__operations_8c_af7d5329dc5c82c92c275096136300e26} 
+\index{matrix\_operations.c@{matrix\_operations.c}!printMatrix@{printMatrix}}
+\index{printMatrix@{printMatrix}!matrix\_operations.c@{matrix\_operations.c}}
+\doxysubsubsection{\texorpdfstring{printMatrix()}{printMatrix()}}
+{\footnotesize\ttfamily void print\+Matrix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{head,  }\item[{int}]{rows,  }\item[{int}]{cols\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+Imprime os elementos da lista em formato tabular, simulando uma matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & O ponteiro para o primeiro nó da lista. \\
+\hline
+{\em rows} & O número de linhas da "{}matriz"{}. \\
+\hline
+{\em cols} & Um array contendo o número de colunas em cada linha. \\
+\hline
+\end{DoxyParams}

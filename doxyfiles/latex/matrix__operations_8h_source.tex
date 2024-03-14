@@ -1,0 +1,25 @@
+\doxysection{matrix\+\_\+operations.\+h}
+\hypertarget{matrix__operations_8h_source}{}\label{matrix__operations_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MATRIX\_OPERATIONS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MATRIX\_OPERATIONS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Estrutura\ para\ um\ nó\ da\ lista}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_node}{Node}}\ \{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keywordtype}{int}\ data;}
+\DoxyCodeLine{00007\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_node}{Node}}*\ next;}
+\DoxyCodeLine{00008\ \}\ \mbox{\hyperlink{struct_node}{Node}};}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Função\ para\ inserir\ um\ nó\ no\ final\ da\ lista}}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix__operations_8c_a3102720fc5b6b804809a31062c0c5821}{insertEnd}}(\mbox{\hyperlink{struct_node}{Node}}**\ headRef,\ \textcolor{keywordtype}{int}\ data);}
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ Função\ para\ imprimir\ os\ elementos\ da\ lista\ em\ formato\ tabular}}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix__operations_8c_af7d5329dc5c82c92c275096136300e26}{printMatrix}}(\mbox{\hyperlink{struct_node}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols[]);}
+\DoxyCodeLine{00046\ \textcolor{comment}{//\ Função\ para\ alterar\ o\ número\ em\ uma\ posição\ específica\ da\ matriz}}
+\DoxyCodeLine{00047\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix__operations_8c_a46b0bdc0c9006c16815979fabb74848e}{alterNumber}}(\mbox{\hyperlink{struct_node}{Node}}*\ head,\ \textcolor{keywordtype}{int}\ rows,\ \textcolor{keywordtype}{int}\ cols[],\ \textcolor{keywordtype}{int}\ rowIndex,\ \textcolor{keywordtype}{int}\ colIndex,\ \textcolor{keywordtype}{int}\ newValue);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00056\ \textcolor{comment}{//\ Função\ para\ liberar\ a\ memória\ alocada\ para\ a\ lista}}
+\DoxyCodeLine{00057\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{matrix__operations_8c_a604d4adbf89038670723d9baedd635d7}{freeList}}(\mbox{\hyperlink{struct_node}{Node}}*\ head);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MATRIX\_OPERATIONS\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
